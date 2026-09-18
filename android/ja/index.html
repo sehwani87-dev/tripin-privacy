@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tripin Androidアプリのプライバシーポリシー" />
+    <title>プライバシーポリシー | Tripin</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #102924;
+        --muted: #5e6b68;
+        --line: #dce6e1;
+        --paper: #ffffff;
+        --wash: #f1f8f5;
+        --accent: #197a60;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--wash);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+          "Hiragino Sans", "Noto Sans JP", sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+        word-break: normal;
+        line-break: strict;
+        overflow-wrap: anywhere;
+      }
+      main { max-width: 820px; margin: 0 auto; padding: 48px 20px 72px; }
+      header { padding: 8px 8px 30px; }
+      .brand { color: var(--accent); font-size: 18px; font-weight: 750; }
+      h1 { margin: 8px 0 4px; font-size: clamp(32px, 7vw, 44px); line-height: 1.25; }
+      .date, .lead { color: var(--muted); }
+      .lead { margin: 18px 0 0; }
+      article {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: clamp(24px, 6vw, 48px);
+        box-shadow: 0 12px 32px rgba(16, 41, 36, 0.06);
+      }
+      section + section { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 34px; }
+      h2 { font-size: 21px; line-height: 1.4; margin: 0 0 12px; }
+      h3 { font-size: 17px; margin: 20px 0 4px; }
+      p { margin: 0 0 14px; }
+      ul { margin: 4px 0 12px; padding-left: 22px; }
+      li + li { margin-top: 7px; }
+      a { color: var(--accent); font-weight: 650; }
+      .notice {
+        margin: 0 0 28px;
+        padding: 18px 20px;
+        border-radius: 14px;
+        background: #eef8f4;
+        color: #23483c;
+      }
+      footer { margin-top: 38px; color: var(--muted); font-size: 14px; }
+
+      .langs { display: flex; gap: 8px; margin: 0 0 22px; flex-wrap: wrap; }
+      .langs a {
+        font-size: 14px; font-weight: 650; text-decoration: none;
+        padding: 6px 14px; border-radius: 999px;
+        border: 1px solid var(--line); background: var(--paper); color: var(--accent);
+      }
+      .langs a[aria-current="page"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav class="langs" aria-label="Language">
+        <a href="../">한국어</a>
+        <a href="../en/">English</a>
+        <a href="./" aria-current="page">日本語</a>
+      </nav>
+      <header>
+        <div class="brand">Tripin</div>
+        <h1>プライバシーポリシー</h1>
+        <p class="date">施行日: 2026年9月14日</p>
+        <p class="lead">
+          Tripinは、旅行中の支出を記録し、地図で確認できるようにするAndroidアプリです。
+          このポリシーでは、アプリで扱う情報と利用者の選択について説明します。
+        </p>
+      </header>
+
+      <article>
+        <p class="notice">
+          旅行および支出の記録はすべて利用者の端末に保存されます。Tripinは会員登録や
+          独自サーバーとの同期を提供しません。地図や場所検索を利用する際は、要求した地図の表示範囲や
+          検索内容が外部サービスに送信されることがあります。
+        </p>
+
+        <section>
+          <h2>1. 運営者および適用範囲</h2>
+          <p>
+            本ポリシーは、個人開発者が提供するTripin Androidアプリおよびこのプライバシーポリシー
+            ページに適用されます。Tripinはアカウントや独自のバックエンドサーバーを運用して
+            いません。個人情報の取り扱いに関するお問い合わせは、本ポリシー末尾のメールアドレスで受け付けます。
+          </p>
+        </section>
+
+        <section>
+          <h2>2. 取り扱う情報と利用目的</h2>
+
+          <h3>旅行および支出の記録</h3>
+          <p>
+            旅行名、都市、日程、予算、通貨、支出した場所、カテゴリ、金額、日付、住所、および支出に
+            保存された場所の位置座標を、旅行の管理、支出の記録、予算や統計の表示に使用します。
+            これらの記録は利用者の端末に保存され、開発者のサーバーには送信されません。
+          </p>
+
+          <h3>位置情報</h3>
+          <p>
+            利用者が位置情報の許可を与え、現在地機能または場所検索を使用する際に、現在地を地図の移動と
+            近くの場所の検索に使用します。アプリはバックグラウンドで位置情報を追跡せず、端末の現在地を
+            開発者のサーバーに継続的に保存することもありません。位置情報を許可しなくても、旅行や支出を
+            手入力できます。
+          </p>
+
+          <h3>広告および広告に関連する情報</h3>
+          <p>
+            アプリは、広告の表示と関連する同意の管理のために、Google Mobile Ads SDK および
+            Google User Messaging Platform（UMP）を使用します。Googleは、広告の配信、フリークエンシー
+            制限、不正利用の防止、効果測定、同意管理の目的で、IPアドレスから推定される大まかな位置、
+            端末識別子（Androidの広告ID、アプリまたは開発者単位の識別子など）、広告の表示情報、アプリの起動や
+            タップなどの操作、クラッシュ記録、パフォーマンスや診断に関する情報などを処理することがあります。
+          </p>
+          <p>
+            アプリはまずUMPで、地域ごとの同意手続きが必要かどうかを確認し、必要な同意画面を表示します。
+            この段階では広告の要求は行いません。UMPが広告のリクエストを許可できると判断した後にのみ、
+            Google Mobile Ads SDK を<strong>アプリの起動ごとに1回</strong>初期化し、広告を要求します。
+            同意情報の更新に失敗した場合は、以前に保存された有効な同意状態が使用されることがあります。
+            広告をパーソナライズするかどうかは、UMPに記録された同意シグナルとGoogleの適用方針に従って
+            決まります。
+          </p>
+          <p>
+            Apple の App Tracking Transparency（ATT）はiOS専用の機能であり、Android版には実装されて
+            いません。Androidでは上記のUMPの同意手続きがその役割を担い、利用者はAndroidの設定で広告IDを
+            リセットまたは削除できます。広告IDを削除しても、非パーソナライズ広告の配信、フリークエンシー
+            制限、集計レポート、不正利用の防止のための処理がすべて停止するわけではありません。同意の選択に
+            かかわらず、旅行の管理、地図、支出の記録といったアプリの主要な機能は引き続き利用できます。
+          </p>
+        </section>
+
+        <section>
+          <h2>3. 収集しない情報</h2>
+          <p>
+            アプリは会員登録を提供しておらず、氏名、パスワード、クレジットカード番号、銀行口座情報を求める
+            ことはありません。アプリ内に問い合わせフォームもありません。利用者が下記のメールアドレスに直接
+            連絡した場合は、メールサービスがメールアドレスと問い合わせ内容を処理することがあります。
+          </p>
+        </section>
+
+        <section>
+          <h2>4. 外部サービスと情報の送信</h2>
+          <p>アプリの機能提供と広告配信のために、次の外部サービスを使用します。</p>
+          <ul>
+            <li>
+              <strong>Googleマップ（Maps SDK for Android）およびGoogle Playサービス</strong>:
+              地図の表示と端末の位置取得に使用します。地図を表示・移動・拡大する際に、表示中の地図範囲などの
+              一般的なネットワーク情報に加えて、IPアドレス、端末・SDK情報、Maps SDK識別子、クラッシュ情報が
+              Googleによって処理されることがあります。
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Googleプライバシーポリシー</a>
+            </li>
+            <li>
+              <strong>Geoapify 場所検索</strong>: 店舗、宿泊施設、観光地の検索に使用します。
+              検索を実行すると、検索語、表示言語、IPアドレスが送信され、現在地を利用できる場合は
+              <strong>小数点以下3桁に丸めた座標</strong>が検索の基準点として併せて送信されます。
+              丸めた座標でも詳細な位置を表す場合があります。現在地を利用できない場合は、検索精度を高めるために、
+              選択中の旅行に保存された都市名が検索語に追加されて送信されることがあります。検索結果はアプリの
+              メモリに一時的に保持されることがあり、旅行の記録として保存していない検索語をアプリの永続的な
+              保存領域に別途保存することはありません。Geoapifyの場所データはOpenStreetMap貢献者のデータに
+              基づいています。
+              <a href="https://www.geoapify.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Geoapifyのプライバシーポリシー</a> ·
+              <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">OpenStreetMapのプライバシーポリシー</a>
+            </li>
+            <li>
+              <strong>Frankfurter 為替レートAPI</strong>: 他の通貨で入力した支出を旅行の通貨に換算し、
+              為替計算機を提供するために使用します。リクエストで送信されるのは
+              <strong>通貨コード2つと基準日のみ</strong>で、支出金額や旅行・位置の情報は送信しません。
+              過去の支出にはその日付のレートを、当日以降の支出と計算機には最新のレートを使用します。
+              取得したレートはアプリのメモリに一時的に保持され、端末の永続的な保存領域には保存しません。
+              <a href="https://frankfurter.dev" target="_blank" rel="noopener noreferrer">Frankfurter</a>
+            </li>
+            <li>
+              <strong>Google Mobile Ads および Google User Messaging Platform</strong>: 広告の配信と同意の
+              管理に使用します。Googleによる情報の取り扱いの詳細は、
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Googleプライバシーポリシー</a>
+              および
+              <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">Googleのサービスを使用するアプリにおける情報の取り扱い</a>
+              で確認できます。
+            </li>
+            <li>
+              <strong>GitHub Pages</strong>: このプライバシーポリシーページの公開ホスティングに使用します。
+              利用者がこのページを開くと、GitHubがIPアドレス、ブラウザ、リクエスト記録などの一般的な
+              アクセス情報を自社の方針に従って処理することがあります。
+              <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHubプライバシーステートメント</a>
+            </li>
+          </ul>
+          <p>
+            上記のサービス提供者は、サービスを運営する国を含む海外のサーバーで情報を処理することがあります。
+            具体的な処理国、保有期間、削除方法、処理方法は、各提供者の方針と利用者の同意の選択に従います。
+            開発者は、外部サービス提供者が関連する契約、適用される法令、およびGoogle Playの要件に従って適切な
+            水準で情報を保護するよう、各サービスの規約とプライバシーポリシーを確認したうえで利用します。
+          </p>
+        </section>
+
+        <section>
+          <h2>5. 保管と削除</h2>
+          <p>
+            旅行および支出の記録は、利用者がアプリ内で削除するまで端末に保管されます。利用者はアプリから
+            個別の支出、旅行全体、または設定の<strong>すべての旅行データを削除</strong>で端末に保存された
+            記録をまとめて削除できます。アプリをアンインストールするか、Androidの設定でアプリのストレージを
+            消去すると、端末に保存されたアプリのデータも削除されます。
+          </p>
+          <p>
+            Androidのバックアップが有効な場合、旅行や支出の記録とアプリの設定が、Googleアカウントの
+            バックアップや端末間のデータ移行に含まれ、後から復元されることがあります。バックアップの保管と
+            削除は、端末とアカウントのバックアップ設定およびGoogleの方針に従い、アプリ内で削除しても、
+            すでに作成されたバックアップや書き出したファイルが直ちに削除されるわけではありません。
+          </p>
+          <p>
+            場所検索サービスおよび広告サービスが処理する情報の保有と削除は、各サービス提供者の方針に従います。
+            開発者が管理できる情報についての確認または削除のご依頼は、下記のお問い合わせ先で受け付けます。
+          </p>
+        </section>
+
+        <section>
+          <h2>6. 利用者の選択と権利</h2>
+          <ul>
+            <li>Androidの設定にあるアプリの権限画面、またはアプリの設定の<strong>位置情報の許可</strong>から、いつでも位置情報の許可を変更できます。</li>
+            <li>Androidの設定の「プライバシー」&gt;「広告」から、広告IDをリセットまたは削除できます。</li>
+            <li>その地域で提供されている場合、アプリの設定の<strong>プライバシー設定</strong>から広告の同意を再確認または変更できます。</li>
+            <li>アプリ内で旅行と支出の記録を直接編集または削除できます。</li>
+            <li>設定の<strong>データを書き出す</strong>から、端末に保存された旅行と支出の記録をCSVファイルとして
+              書き出せます。書き出したファイルは利用者が選んだ保存先やアプリに渡され、開発者には送信されません。</li>
+            <li>設定の<strong>すべての旅行データを削除</strong>から、端末に保存された記録を一度に削除できます。</li>
+            <li>開発者が管理する情報の開示、訂正、削除、および個人情報の取り扱いに関するお問い合わせは、下記の連絡先までお送りください。</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>7. 情報の保護</h2>
+          <p>
+            旅行および支出の記録は、Androidのアプリ専用の保存領域に保存されます。外部サービスへのアプリの
+            ネットワークリクエストにはHTTPSを使用します。ただし、いかなる保存方法や送信方法も絶対的な安全性を
+            保証することはできず、端末の画面ロックやバックアップの設定も情報の保護に影響します。開発者はアプリの
+            機能と取り扱う情報の性質に応じた合理的な保護措置を維持するよう努めます。
+          </p>
+        </section>
+
+        <section>
+          <h2>8. 子どものプライバシー</h2>
+          <p>
+            Tripinは子どもを対象に設計されたサービスではなく、子どもの個人情報を意図的に収集する
+            ことはありません。子どもの個人情報が処理されたと思われる場合は、下記のお問い合わせ先までご連絡ください。
+          </p>
+        </section>
+
+        <section>
+          <h2>9. ポリシーの変更</h2>
+          <p>
+            アプリの機能、使用する外部サービス、または関連する法令が変更された場合、このポリシーを改定する
+            ことがあります。重要な変更については、このページまたはアプリを通じてお知らせし、施行日を更新します。
+          </p>
+        </section>
+
+        <section>
+          <h2>10. お問い合わせ先</h2>
+          <p>個人情報の取り扱いに関するお問い合わせは、下記のメールアドレスまでお送りください。</p>
+          <p><a href="mailto:sehwani87@gmail.com">sehwani87@gmail.com</a></p>
+        </section>
+      </article>
+
+      <footer>© 2026 Tripin · プライバシーポリシー</footer>
+    </main>
+  </body>
+</html>
