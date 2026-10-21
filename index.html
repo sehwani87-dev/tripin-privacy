@@ -62,7 +62,7 @@
       <header>
         <div class="brand">Tripin</div>
         <h1>Privacy Policy</h1>
-        <p class="date">Effective date: October 1, 2026</p>
+        <p class="date">Effective date: October 21, 2026</p>
         <p class="lead">
           Tripin is an iOS app that helps you plan your trip schedule and record what you spend
           while traveling, then review it on a map. This policy explains what information the
@@ -72,20 +72,32 @@
 
       <article>
         <p class="notice">
-          Your complete trip, schedule, and expense records are stored on your device. Tripin does not
-          offer accounts or sync to a server of its own. Any photos you attach to an expense, a schedule item, or a
-          trip are also stored only on your device. When you use the map or place search, the
-          map region or search request you make may be sent to an external service. Tapping
-          Directions opens Google Maps or NAVER Map with the destination's location.
+          Tripin keeps trip, schedule, and expense records on your device. If you choose to
+          enable iCloud sync and approve the applicable initial transfer or connection, these
+          records and the photos referenced by them can also be stored in your Apple account's
+          private CloudKit database and synchronized with your other connected devices.
+          Tripin does not operate a separate developer-hosted server for these records.
+          Turning sync off or removing the app does not erase previously synchronized iCloud
+          data. Deleted records, recovery history, and protected photo copies can remain as
+          explained in Section 5. Map searches, directions, exchange rates, and advertising
+          use separate external services even when iCloud sync is off.
         </p>
 
         <section>
           <h2>1. Operator and scope</h2>
           <p>
-            This policy applies to the Tripin iOS app, provided by an individual developer,
-            and to this privacy policy page. Tripin does not operate accounts or a backend
-            server of its own. Questions about the handling of personal information can be sent to
-            the email address at the bottom of this policy.
+            This policy applies to the Tripin iOS and iPadOS app, provided by an individual
+            developer, and to this privacy policy page. It does not describe the separate
+            Android app. Tripin has no separate Tripin account registration or developer-hosted
+            trip database. Optional sync uses your existing Apple iCloud account.
+            Questions about personal information can be sent to the contact address below.
+          </p>
+          <p>
+            <strong>Applicability:</strong> this policy applies to Tripin for iOS and iPadOS
+            version 1.4 and later, including optional iCloud sync, trip-deletion confirmations,
+            <strong>Records to Review</strong>, and retained-content management. Some of these
+            features become available only after you enable them or approve the related
+            in-app steps.
           </p>
         </section>
 
@@ -94,20 +106,40 @@
 
           <h3>Trip, schedule, and expense records</h3>
           <p>
-            Trip name, city, dates, budget, currency, place of expense, category, amount, date,
-            address, and the location coordinates saved with an expense are used for trip
-            management, expense records, and budget and statistics displays. If you add a trip
-            schedule item, its name, place name, category, date and time, notes, and location
-            coordinates are used for schedule management and map display. These records are
-            stored on your device and are not transmitted to the developer's server.
+            Trip names, city and country or region, dates, budgets, currencies, and cover-photo
+            references are used for trip management. Schedule names, place names, categories,
+            dates and times, saved coordinates, addresses, notes, and photo references are used
+            for planning and map display. Expenses include names, categories, amounts in the
+            trip's accounting currency, original amounts and currencies, entered currency and
+            precision, dates, saved coordinates, addresses, notes, and photo references. Stored
+            converted amounts and their accounting context are retained; sync does not make a
+            new exchange-rate request to reinterpret a record.
+          </p>
+          <p>
+            When you approve iCloud sync, these saved fields, record identifiers, parent-trip
+            links, and synchronization information are sent to Apple's private CloudKit
+            storage for cross-device continuity, updates, and deletion propagation. Technical
+            information includes app-generated writer and change identifiers, record versions,
+            and deletion flags and dates. Device settings, selected-trip state, and top-level
+            list order are not synchronized as business-record fields. Tripin does not send
+            these trip records to a developer-hosted server.
           </p>
 
           <h3>Photos and camera</h3>
           <p>
-            Photo library or camera access is requested only when you choose to attach a photo to
-            an expense, a schedule item, or a trip. Photos you pick from your library and photos you capture with
-            the camera are stored in Tripin's own storage area on your device, and are not
-            transmitted to the developer's server or any other external service.
+            Photo library or camera access is used when you choose to attach a photo to an
+            expense, schedule item, or trip. The attached image copy is stored in Tripin's own
+            storage area. With approved iCloud sync, referenced trip covers and attached photos
+            can also be uploaded as image files to Apple's private CloudKit storage and
+            downloaded to your connected devices. Tripin does not upload your entire system
+            Photos library or every unreferenced file in its local photo storage.
+          </p>
+          <p>
+            Photo references, byte counts, and SHA-256 content checksums accompany synchronized
+            image files to verify identity and detect changed or corrupted bytes, not to merge
+            unrelated photos. Transfers can use temporary app-private file copies and
+            protection markers so a pending transfer or recovery does not lose its original.
+            Photos are not sent to a developer-hosted trip server.
           </p>
           <p>
             When you confirm a photo taken with the camera, it is attached to Tripin and, at the
@@ -116,10 +148,12 @@
             into the system Photos library.
           </p>
           <p>
-            Deleting an expense, a schedule item, or a trip also deletes the associated photo copy inside Tripin's own
-            storage area. The original saved to your system Photos library when captured with the
-            camera is not deleted, and must be removed directly in the Photos app if you want to
-            remove it.
+            Removing a record does not promise immediate permanent deletion of every photo
+            copy. Other live records, unfinished transfers, or retained recovery history can
+            still reference and protect an image. Section 5 explains this retention. Removing
+            a Tripin attachment does not delete the image in the system Photos library; manage
+            that image in Photos separately. iCloud Photos and iOS device backups are separate
+            from Tripin's CloudKit sync.
           </p>
 
           <h3>Location information</h3>
@@ -170,12 +204,32 @@
         </section>
 
         <section>
-          <h2>3. Information not collected</h2>
+          <h2>3. Account information and direct contact</h2>
           <p>
-            The app does not offer account registration and does not ask for your name, a password,
-            payment card numbers, or bank account information. There is no inquiry form inside the
-            app. If you contact the developer directly at the email address below, the email
-            service may process your email address and the contents of your message.
+            Tripin does not ask you to register a Tripin account or enter an Apple account
+            password, payment card number, or bank account number. To check iCloud availability
+            and prevent one account's saved sync state from being used with another, the app
+            asks CloudKit for account status and its container-specific user record identifier.
+            It derives a SHA-256 identifier from that value and stores it in local sync
+            ownership and approval information. A hash is not a guarantee of anonymity.
+          </p>
+          <p>
+            If the account changes or cannot be verified, the app blocks use of the previous
+            account's sync state; it does not automatically transfer that state to a new
+            account. Local records and retained information are not automatically erased or
+            separated into a new set of trip records. Connecting another account is not a
+            silent migration and may require review or remain blocked.
+          </p>
+          <p>
+            After returning to the originally connected Apple account, you can use the existing
+            retry action. In some interrupted connection states, retry alone cannot resume
+            synchronization: completely closing and reopening Tripin can be necessary so the
+            app checks the original account and saved state again. Returning to an account is
+            not a guarantee of automatic recovery, and does not reset or re-register ownership.
+          </p>
+          <p>
+            There is no inquiry form inside the app. If you email the developer, the email
+            service may process your email address, message, and any files you choose to send.
           </p>
         </section>
 
@@ -183,6 +237,20 @@
           <h2>4. External services and transfers</h2>
           <p>The following external services are used for app features and to serve ads.</p>
           <ul>
+            <li>
+              <strong>Apple iCloud / CloudKit</strong>: optional storage and sync of the records,
+              linked photos, and technical information described above in your Apple account's
+              private database, not Tripin's public database or a developer-operated trip server.
+              Account checks and read-only comparisons can occur during a requested review
+              before you approve a transfer. Initial connection, any new private sync area, and
+              initial record/photo transfer have separate approval boundaries where applicable;
+              connecting does not by itself authorize an unapproved initial upload. Previously
+              approved sync can resume on launch or foreground while enabled.
+              Apple operates this service and handles service/account information under its own
+              terms and privacy practices.
+              <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>
+              and <a href="https://developer.apple.com/documentation/cloudkit/ckcontainer/privateclouddatabase" target="_blank" rel="noopener noreferrer">Apple's private CloudKit database documentation</a>.
+            </li>
             <li>
               <strong>Apple Maps (MapKit)</strong>: used for map display and place search inside
               the app. When a map is displayed or moved, general network information such as the
@@ -243,26 +311,138 @@
             The service providers above may process information on servers outside your country,
             including in the countries where they operate. The specific countries of processing,
             retention periods, deletion methods, and processing practices follow each provider's
-            policy and your consent choices. The developer reviews each service's terms and privacy
-            policy so that external service providers protect information at an appropriate level
-            in accordance with the relevant agreements, applicable law, and Apple's requirements.
+            policy and your consent choices. The linked notices explain the providers' own
+            processing. This policy does not promise a particular storage country or retention
+            period where those have not been established for the service.
           </p>
         </section>
 
         <section>
           <h2>5. Retention and deletion</h2>
+          <h3>Active records and propagation</h3>
           <p>
-            Trip, schedule, and expense records are kept on your device until you delete them in the app. You
-            can delete an individual expense, an individual schedule item, an entire trip, or every record stored on the device
-            at once using <strong>Delete All Trip Data</strong> in Settings. Deleting the
-            app generally also deletes the app data stored on your device. Whether data is retained
-            through an iOS backup or your device settings depends on Apple's policy and your device
-            configuration.
+            You can delete an individual expense or schedule item, a trip with its schedules
+            and expenses, or all active trip records using <strong>Delete All Trip Data</strong>
+            in Settings. Trip and all-trip deletion require confirmation that describes the
+            selected records and whether deletion also reaches connected devices. This is not
+            an erasure of all app settings, sync metadata, recovery history, or every photo.
           </p>
           <p>
-            Retention and deletion of information processed by the place search service and the
-            advertising services follow each provider's policy. Requests to review or delete
-            information under the developer's control can be sent to the contact address below.
+            A store never connected to sync deletes its active records locally. For a store
+            already connected to sync, accepted deletions are retained for transmission even
+            while sync is off or the device is offline. They can reach iCloud and other connected
+            devices when synchronization resumes with the matching account. Propagation is not
+            necessarily immediate. If ownership or recovery state is unsafe, deletion or sync
+            can be blocked rather than being silently treated as device-only.
+          </p>
+
+          <h3>Deletion markers and recovery content</h3>
+          <p>
+            Synchronized deletion uses a retained deletion marker to prevent an old device from
+            recreating a deleted record. Text deletion clears the normal trip, schedule, or
+            expense content fields in that server record while retaining technical deletion
+            information. A photo deletion update removes the active image-file field and its
+            content hash and byte-count fields, while retaining its reference and deletion
+            information. These updates are not a promise of immediate physical erasure from
+            Apple's systems or backups.
+          </p>
+          <p>
+            Separately, app-private local sync metadata can retain full record content:
+            pending saved changes, versions used for comparison, interrupted-apply checkpoints,
+            and device, previously received iCloud, and base snapshots of a conflict.
+            Conflict-resolution history can retain the original snapshots, discarded local
+            content, the selected result, and processing status after a decision or copy
+            recovery. These are not just content-free deletion markers. Such local recovery
+            snapshots are not themselves separate CloudKit history records; an approved
+            recovered copy or chosen result can be synchronized as a normal record.
+          </p>
+          <p>
+            There is no automatic time-based expiry for deletion evidence, retained conflict
+            content, or resolution history. Unresolved content remains until a supported
+            resolution or an explicitly confirmed decision to give it up. Completing a
+            resolution does not by itself remove its retained content. No 30-day, 90-day, or
+            other fixed deletion deadline is promised.
+          </p>
+          <h3>Selected retained content on this device</h3>
+          <p>
+            In builds providing retained-content management, <strong>Records to Review</strong>
+            lets you review and confirm <strong>Delete Retained Content</strong> for one
+            eligible resolved history. For a supported unresolved item, you can explicitly
+            give up its retained content only after the app safely determines the resulting
+            record state, such as accepting a currently verified iCloud result or deletion.
+            This is not merely clearing a warning. Online verification, a changed record,
+            incomplete work, or another recovery dependency can delay or block the action.
+          </p>
+          <p>
+            The action concerns the selected archival content in the storage connected to the
+            current device, account, and sync environment. Once removed, that history cannot
+            be used to recover its former content. Live records, recovered copies, and
+            comparison versions or checkpoints still needed for safe saving and sync remain.
+            A compact completion identifier, result linkage, and deletion protection can remain
+            to prevent repeated recovery or resurrection; these technical identifiers are not
+            guaranteed to be anonymous. Necessary dependencies are not removed just to report
+            completion.
+          </p>
+          <p>
+            This control does not erase saved state from a previous development connection or
+            another account or environment, independent backups, exported files, other devices,
+            or all data in iCloud. Switching accounts does not erase those stores. Deleting
+            active records is separate from deleting selected retained content. A comprehensive
+            permanent-erasure procedure for all these locations has not been established or
+            verified, and is not promised here.
+          </p>
+
+          <h3>Photos, protected transfers, and recovery</h3>
+          <p>
+            The app can remove an unreferenced local photo candidate after the related record
+            change has been saved, but only when no other live record, transfer protection, or
+            retained conflict or resolution history still needs it. Transfer protection is
+            released after the applicable confirmed or safely cancelled operation; uncertain
+            outcomes can keep it in place. There is no automatic orphan-protection sweep.
+            Completed recovery does not release a reference still held by retained history,
+            and an incoming remote photo deletion does not itself aggressively erase the local
+            original. Some local originals and temporary transfer copies can remain; the app
+            does not guarantee a deletion deadline for all copies.
+          </p>
+          <p>
+            Explicit retained-content removal considers only photo references released by the
+            selected history, not every file in the photo folder. Before removing a candidate,
+            the app checks live records, other histories, unfinished transfers and temporary
+            transfer files, recovery protection, comparison versions, and other saved sync
+            stores. If a dependency cannot be checked, the file stays protected. Content-state
+            saving and photo-file removal are separate steps; cleanup may remain pending or
+            partly protected and can resume after a failure or restart. A newly referenced or
+            shared photo is not promised to be removed with the selected history.
+          </p>
+
+          <h3>Turning sync off, removing the app, and Apple storage</h3>
+          <p>
+            Turning <strong>iCloud Sync</strong> off stops new automatic sync requests and
+            discards queued triggers. A previously approved operation already running can finish
+            its durable work, including a remote write, before stopping; off is not an
+            instantaneous cancellation or an iCloud erasure request. Explicitly requesting a
+            connection review or an online conflict review can still contact Apple while
+            automatic sync is off. Turning it off does not stop the separate external services
+            in Section 4.
+          </p>
+          <p>
+            Removing the app normally removes its local sandbox data; offloading the app or
+            retaining/restoring an OS backup can preserve data instead. Removing Tripin does
+            not request deletion of its private CloudKit records. Data may become available
+            again through a later approved connection. Tripin CloudKit sync, system Photos,
+            iCloud Photos, and device backups have separate storage and deletion controls.
+            Use Apple's available iCloud storage controls or support for the data Apple manages;
+            this policy does not promise that a specific OS control erases all Tripin markers,
+            backups, or copies immediately.
+          </p>
+          <p>
+            Retention of information processed by maps, advertising, exchange-rate, website,
+            and email services follows the relevant provider's practices. For information the
+            developer actually controls, such as messages you send for support, you can request
+            access, correction, or deletion at the contact address below, subject to applicable
+            obligations. The developer has no in-app administrative control to remotely inspect
+            or erase every user's private iCloud database and does not promise to perform such
+            an erasure on receipt of an email.
           </p>
         </section>
 
@@ -272,25 +452,78 @@
             <li>You can change location permission at any time in the Tripin permission screen in iPhone Settings.</li>
             <li>You can change photo library and camera permission at any time in the Tripin permission screen in iPhone Settings.</li>
             <li>You can change whether Tripin is allowed to track under Settings &gt; Privacy &amp; Security &gt; Tracking on your iPhone.</li>
-            <li>You can edit or delete trips, schedule items, and expense records directly in the app.</li>
+            <li>You can use Settings &gt; iCloud Sync to review a proposed connection, grant the
+              applicable transfer approval, and turn ongoing sync on or off. Turning it off
+              does not erase data already in iCloud; Section 5 explains pending work and deletion.</li>
+            <li>You can edit or delete active trips, schedules, and expenses. Trip/all-trip
+              confirmation describes the actual local or connected-device scope. Connected
+              deletions may be applied on other devices later.</li>
+            <li>In builds providing <strong>Records to Review</strong>, you can view locally
+              retained conflict content offline without resolving it just by opening the list.
+              Previously stored iCloud content is a historical copy, not a claim of the current
+              server state. Some histories are read-only if safe action cannot be established.</li>
+            <li>A supported record below a deleted trip can be recovered as a new copy in a
+              valid trip; a supported deleted trip edit can become a new trip. This does not
+              restore the original deleted identifier or erase its deletion evidence.
+              Schedule/expense destinations must preserve the original trip's base currency;
+              no arbitrary conversion is performed.</li>
+            <li>For supported simultaneous edits of a still-live trip, schedule, or expense,
+              the app offers <strong>Use This Device's Content</strong>,
+              <strong>Use iCloud Content</strong>, or <strong>Later</strong>, with a complete
+              result preview. Nonconflicting changes are retained. Online actions recheck the
+              account, latest record, parent, and local state; changed or deleted records require
+              another review or copy recovery instead of forced restoration.</li>
+            <li>Copy recovery and resolution keep prior content in local history, including
+              local content discarded when choosing iCloud. Missing originals, changed photo
+              checksums, incompatible destination currency, unverified history, or unsafe
+              pending state can prevent completion. Recovery is not guaranteed to be complete.
+              Saving on this device and waiting to reach other devices are distinct from
+              confirmation of the chosen result in iCloud; that confirmation does not certify
+              that every photo or every other record has finished syncing.</li>
+            <li>Where supported, you can select a retained history, review the stated local
+              scope, and confirm <strong>Delete Retained Content</strong>, or explicitly give
+              up unresolved content after reviewing the resulting record state. Cancelling
+              does not remove the content. This removes access to the selected archival copy,
+              not normal live records, other stores, or all iCloud data. Photos required
+              elsewhere can remain, and pending or blocked cleanup is not complete erasure.
+              Section 5 describes the boundaries and retained technical information.</li>
             <li>You can export the trip schedules and expenses stored on your device as an Excel, PDF, or
               CSV file using <strong>Export Data</strong> in Settings. The file is generated on your device;
               the exported file goes to the location or app you choose and is not sent to the developer.</li>
-            <li>You can erase everything stored on the device at once using <strong>Delete All Trip
-              Data</strong> in Settings.</li>
+            <li>You can also save your trips, expenses, and schedules as a backup file (JSON) using
+              <strong>Export Backup File</strong> in Settings, and merge such a file back using
+              <strong>Import Backup File</strong>. The file is created and read on your device,
+              does not include photos, goes only to the location or app you choose, and is not sent
+              to the developer. Importing adds records and overwrites records with the same identifier;
+              it does not delete existing records, and it is unavailable while iCloud sync is on.</li>
+            <li><strong>Delete All Trip Data</strong> removes active trip records, not all
+              settings, retained recovery history, or every local/iCloud photo copy. See
+              Section 5 before using it or removing the app.</li>
             <li>Where it is offered in your region, you can review or change your advertising consent from the privacy choices menu in the app.</li>
-            <li>To access, correct, or delete information under the developer's control, or to ask about the handling of personal information, use the contact address below.</li>
+            <li>Use the contact address below for requests concerning information the developer
+              controls or questions about app behavior. Use your own device/account controls
+              and Apple's support for Apple-managed iCloud data. Do not send passwords,
+              private sync files, or photographs unless you deliberately choose to share
+              material needed for support.</li>
           </ul>
         </section>
 
         <section>
           <h2>7. Protection of information</h2>
           <p>
-            Trip, schedule, and expense records are stored inside the iOS app sandbox. The app's network
-            requests to external services use HTTPS. That said, no method of storage or transmission
-            can be guaranteed to be absolutely secure, and the developer works to maintain
-            reasonable protections appropriate to the app's features and the nature of the
-            information handled.
+            Local records, sync state, protected image files, and recovery history are stored
+            in the app's sandbox. Sync separates account and service-environment state, checks
+            record versions before conditional updates, and verifies image bytes with content
+            checksums. A checksum is an integrity check, not encryption or anonymization.
+            Apple operates the private CloudKit storage and its service security; this app
+            does not claim its own end-to-end encryption of these record fields or images,
+            complete anonymity, or absolute inaccessibility.
+          </p>
+          <p>
+            App network requests use the relevant Apple SDK or HTTPS services. Storage,
+            transmission, and provider controls cannot guarantee absolute security.
+            Keeping records private in CloudKit does not eliminate processing by Apple's
+            service or the separate advertising, map, and other services described above.
           </p>
         </section>
 
