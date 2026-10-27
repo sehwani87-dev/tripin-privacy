@@ -62,7 +62,7 @@
       <header>
         <div class="brand">Tripin</div>
         <h1>Privacy Policy</h1>
-        <p class="date">Effective date: October 21, 2026</p>
+        <p class="date">Effective date: October 27, 2026</p>
         <p class="lead">
           Tripin is an iOS app that helps you plan your trip schedule and record what you spend
           while traveling, then review it on a map. This policy explains what information the
@@ -154,6 +154,21 @@
             a Tripin attachment does not delete the image in the system Photos library; manage
             that image in Photos separately. iCloud Photos and iOS device backups are separate
             from Tripin's CloudKit sync.
+          </p>
+
+          <h3>Home Screen widgets</h3>
+          <p>
+            If you add a Tripin widget to your Home Screen, the app saves a small summary of
+            your active trip in a shared storage area (an App Group) that only Tripin and its
+            widget can read on your device. The summary can include today's and tomorrow's
+            spending and the remaining budget as formatted text, the number of remaining days,
+            the daily allowance, and up to three upcoming schedule items for today with their
+            times and names, plus the place name of the first item. The widget reads this
+            summary from your device only. It does not use the network, advertising, location,
+            or photos, and this summary is not sent to a developer-hosted server or added to
+            iCloud by the widget. If you do not add a widget, the app can still keep this
+            summary on your device, and it is removed with the app. Widget content on a locked
+            device can be hidden by iOS privacy settings.
           </p>
 
           <h3>Location information</h3>
@@ -495,7 +510,9 @@
               <strong>Import Backup File</strong>. The file is created and read on your device,
               does not include photos, goes only to the location or app you choose, and is not sent
               to the developer. Importing adds records and overwrites records with the same identifier;
-              it does not delete existing records, and it is unavailable while iCloud sync is on.</li>
+              it does not delete existing records, and it is unavailable while iCloud sync is on.
+              If a backup contains records that were already deleted through sync, Tripin offers
+              to add them as new trip records instead of overwriting them.</li>
             <li><strong>Delete All Trip Data</strong> removes active trip records, not all
               settings, retained recovery history, or every local/iCloud photo copy. See
               Section 5 before using it or removing the app.</li>
