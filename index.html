@@ -62,7 +62,7 @@
       <header>
         <div class="brand">Tripin</div>
         <h1>Privacy Policy</h1>
-        <p class="date">Effective date: October 27, 2026</p>
+        <p class="date">Effective date: November 13, 2026</p>
         <p class="lead">
           Tripin is an iOS app that helps you plan your trip schedule and record what you spend
           while traveling, then review it on a map. This policy explains what information the
@@ -80,7 +80,10 @@
           Turning sync off or removing the app does not erase previously synchronized iCloud
           data. Deleted records, recovery history, and protected photo copies can remain as
           explained in Section 5. Map searches, directions, exchange rates, and advertising
-          use separate external services even when iCloud sync is off.
+          use separate external services even when iCloud sync is off. If you use the
+          companion settlement feature, the settlement details you enter are saved on your
+          device and, when iCloud sync is on, also stored in your Apple account's private
+          CloudKit database as described in Section 2.
         </p>
 
         <section>
@@ -94,7 +97,8 @@
           </p>
           <p>
             <strong>Applicability:</strong> this policy applies to Tripin for iOS and iPadOS
-            version 1.4 and later, including optional iCloud sync, trip-deletion confirmations,
+            version 1.4 and later, including optional iCloud sync, companion settlement (version 1.7
+            and later), trip-deletion confirmations,
             <strong>Records to Review</strong>, and retained-content management. Some of these
             features become available only after you enable them or approve the related
             in-app steps.
@@ -128,8 +132,9 @@
           <h3>Photos and camera</h3>
           <p>
             Photo library or camera access is used when you choose to attach a photo to an
-            expense, schedule item, or trip. The attached image copy is stored in Tripin's own
-            storage area. With approved iCloud sync, referenced trip covers and attached photos
+            expense, schedule item, or trip. A trip cover photo is chosen from your photo
+            library; the camera is not used for trip covers. The attached image copy is stored
+            in Tripin's own storage area. With approved iCloud sync, referenced trip covers and attached photos
             can also be uploaded as image files to Apple's private CloudKit storage and
             downloaded to your connected devices. Tripin does not upload your entire system
             Photos library or every unreferenced file in its local photo storage.
@@ -154,6 +159,35 @@
             a Tripin attachment does not delete the image in the system Photos library; manage
             that image in Photos separately. iCloud Photos and iOS device backups are separate
             from Tripin's CloudKit sync.
+          </p>
+
+          <h3>Companion settlement</h3>
+          <p>
+            The settlement screen of a trip lets you add up to ten companion names (including
+            your own), choose for each expense who paid and who shares it, and see who owes
+            whom. These names, expense splits, and related settings are saved in Tripin's own
+            storage on your device. Tripin does not read your contacts, and companions are not
+            asked to install the app or to agree to anything.
+          </p>
+          <p>
+            When iCloud sync is on, the settlement details of each trip are also stored in your
+            Apple account's private CloudKit database, in a sync area that is separate from the
+            trip, schedule, and expense records, so that your other connected devices show the
+            same settlement. There is no separate settlement switch: turning iCloud sync on
+            starts this synchronization together with trip sync, and turning iCloud sync off
+            stops it. The content is stored in an encrypted CloudKit field. Technical
+            information that is not encrypted includes the trip identifier, a record version,
+            an app-generated change identifier, and deletion flags and dates. Tripin does not
+            send settlement details to a developer-hosted server, and the developer has no
+            access to your private iCloud database.
+          </p>
+          <p>
+            If you already used iCloud sync before updating to version 1.7, settlements you
+            created on that device are uploaded to your private iCloud database after the
+            update, without a separate prompt, as soon as sync is on and up to date. Settlement
+            synchronization does not overwrite a differing settlement automatically; when two
+            devices changed the same trip's settlement, the app keeps both versions on the
+            device and asks you to choose.
           </p>
 
           <h3>Home Screen widgets</h3>
@@ -265,6 +299,11 @@
               terms and privacy practices.
               <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>
               and <a href="https://developer.apple.com/documentation/cloudkit/ckcontainer/privateclouddatabase" target="_blank" rel="noopener noreferrer">Apple's private CloudKit database documentation</a>.
+              This includes the companion settlement details of each trip, which are stored in a
+              separate sync area of the same private database in an encrypted field. Apple's
+              protection of encrypted CloudKit fields, including with Advanced Data Protection,
+              follows Apple's own documentation:
+              <a href="https://developer.apple.com/documentation/cloudkit/encrypting-user-data" target="_blank" rel="noopener noreferrer">Apple's CloudKit encryption documentation</a>.
             </li>
             <li>
               <strong>Apple Maps (MapKit)</strong>: used for map display and place search inside
@@ -378,6 +417,20 @@
             resolution does not by itself remove its retained content. No 30-day, 90-day, or
             other fixed deletion deadline is promised.
           </p>
+          <p>
+            Deleting a trip also deletes its settlement. On a synchronized store, the settlement
+            record in iCloud is replaced by a retained deletion marker that keeps the trip
+            identifier and deletion date but not the settlement content, to prevent an old
+            device from recreating it. As with other records, this is not a promise of immediate
+            physical erasure from Apple's systems or backups. If a settlement for a trip that no
+            longer exists on this device is still present in iCloud, the app keeps it untouched
+            and does not show it as a problem; it is not deleted by the app. Settlement conflict
+            content (the versions from this device and from iCloud) stays in app-private local
+            storage until you choose a version and, like other retained conflict content, has no
+            automatic expiry. Turning iCloud sync off, or removing the app, does not erase
+            settlement details already stored in iCloud.
+          </p>
+
           <h3>Selected retained content on this device</h3>
           <p>
             In builds providing retained-content management, <strong>Records to Review</strong>
@@ -470,6 +523,16 @@
             <li>You can use Settings &gt; iCloud Sync to review a proposed connection, grant the
               applicable transfer approval, and turn ongoing sync on or off. Turning it off
               does not erase data already in iCloud; Section 5 explains pending work and deletion.</li>
+            <li>Settlement details follow the iCloud Sync setting: they sync only while iCloud
+              Sync is on, and you can edit or delete a trip's settlement on the settlement screen.
+              Deleting the trip deletes its settlement as described in Section 5.</li>
+            <li>Settlements are not included in the trip backup file or in Export Data. You can
+              save all settlements on this device as a separate settlement backup file, which
+              contains companion names and amounts, and import it later; importing applies a
+              settlement only to a trip with the same identifier and currency on this device,
+              after you review a preview. You can also export one trip's settlement result as a
+              CSV file from its settlement screen. These files are created on your device, go
+              only to the location or app you choose, and are not sent to the developer.</li>
             <li>You can edit or delete active trips, schedules, and expenses. Trip/all-trip
               confirmation describes the actual local or connected-device scope. Connected
               deletions may be applied on other devices later.</li>
